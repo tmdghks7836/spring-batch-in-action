@@ -29,7 +29,7 @@ import static java.time.format.DateTimeFormatter.ofPattern;
  * Github : http://github.com/jojoldu
  */
 
-@Slf4j // log 사용을 위한 lombok 어노테이션
+@Slf4j //
 @RequiredArgsConstructor // 생성자 DI를 위한 lombok 어노테이션
 @Configuration
 public class BatchJpaTestConfiguration {

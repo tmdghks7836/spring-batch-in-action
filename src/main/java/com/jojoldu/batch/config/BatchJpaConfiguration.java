@@ -35,7 +35,7 @@ import static com.jojoldu.batch.config.DataSourceConfiguration.READER_DATASOURCE
 @EnableConfigurationProperties({JpaProperties.class, HibernateProperties.class})
 @EnableJpaRepositories(
         basePackages = PACKAGE,
-        entityManagerFactoryRef = MASTER_ENTITY_MANAGER_FACTORY, // default와 같아서 생략도 가능
+        entityManagerFactoryRef = MASTER_ENTITY_MANAGER_FACTORY,
         transactionManagerRef = MASTER_TX_MANAGER
 )
 public class BatchJpaConfiguration {

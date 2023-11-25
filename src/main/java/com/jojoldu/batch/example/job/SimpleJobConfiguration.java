@@ -30,18 +30,18 @@ public class SimpleJobConfiguration {
 
     @Bean
     public Job simpleJob() {
-        return jobBuilderFactory.get("simpleJob")
+        return jobBuilderFactory.get(JOB_NAME)
                 .start(simpleStep1())
+                .next(simpleStep2(null))
                 .build();
     }
 
+    private final SimpleJobTasklet simpleJobTasklet;
     @Bean
+    @JobScope
     public Step simpleStep1() {
         return stepBuilderFactory.get("simpleStep1")
-                .tasklet((contribution, chunkContext) -> {
-                    log.info(">>>>> This is Step1");
-                    return RepeatStatus.FINISHED;
-                })
+                .tasklet(simpleJobTasklet)
                 .build();
     }
 

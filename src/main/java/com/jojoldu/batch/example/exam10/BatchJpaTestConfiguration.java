@@ -30,7 +30,7 @@ import static java.time.format.DateTimeFormatter.ofPattern;
  */
 
 @Slf4j //
-@RequiredArgsConstructor // 생성자 DI를 위한 lombok 어노테이션
+@RequiredArgsConstructor
 @Configuration
 public class BatchJpaTestConfiguration {
     public static final DateTimeFormatter FORMATTER = ofPattern("yyyy-MM-dd");

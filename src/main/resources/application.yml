@@ -1,7 +1,8 @@
 spring:
   profiles:
-    active: local
+    active: mysql
 
+spring.batch.job.names: ${job.name:NONE}
 ---
 spring:
   datasource:
